@@ -27,17 +27,40 @@
 
     <section data-cy="hw1-section-about-pre">
         <!-- 2) В этом разделе создай выпадающий список с разными городами (не меньше 3-х). Свой город сделай вторым в этом списке. С помощью специального атрибута, сделай так, чтобы твой город всегда был выбранным по умолчанию  -->
+        <select name="city" id="city-select">
+            <option value="moscow">Москва</option>
+            <option value="krasnoyarsk" selected>Красноярск</option>
+            <option value="perm">Пермь</option>
+            <option value="samara">Самара</option>
+            <option value="novosibirsk">Новосибирск</option>
+        </select>
         <div data-cy="hw1-unordered-list-box-pre">
             <!-- 3) В этом разделе создай 2 дочерних элемента: -->
 
             <!-- a) Заголовок 2-го уровня (любимые книги/фильмы/блюда/страны... и т.п.) -->
+        <h2>Любимые блюда</h2>
             <!-- b) Маркированный список. В списке должно быть не менее 3-х элементов -->
+        <ul>
+            <li>Беф-бургиньон</li>
+            <li>Террин из гусиного фуа-гра</li>
+            <li>Тартар из лосося</li>
+            <li>Крем-брюле</li>
+            <li>Солянка</li>
+        </ul>
         </div>
         <div data-cy="hw1-ordered-list-box-pre">
             <!-- 3) В этом разделе создай 2 дочерних элемента: -->
 
             <!-- a) Заголовок 2-го уровня с другим названием (любимые книги/фильмы/блюда/страны... и т.п.) -->
+            <h2>Любимые языки</h2>
             <!-- b) Нумерованный (упорядоченный) список. В списке должно быть не менее 3-х элементов -->
+            <ol>
+                <li>Английский</li>
+                <li>Японский</li>
+                <li>Арабский</li>
+                <li>Китайский</li>
+                <li>Турецкий</li>
+            </ol>
         </div>
         <div data-cy="hw1-skills-box-pre">
             <h2>Мои скиллы</h2>
@@ -45,20 +68,77 @@
                 - В подписи укажи названия любых тем по верстке (все, что знаешь или слышал). 
                 - Каждый чекбокс должен быть связан со своей подписью. Для этого чекбокс должен находиться в элементе для подписи
                 - Отметь "галочкой" (с помощью специального атрибута) темы, которые ты уже знаешь. -->
+            <div>
+                <label> HTML
+                    <input type="checkbox" name="html" id="html-box" checked>
+                </label>
+            </div>
+
+            <div>
+                <label>CSS
+                    <input type="checkbox" name="css" id="css-box" checked>
+                </label>
+            </div>
+
+            <div>
+                <label>JavaScript
+                    <input type="checkbox" name="js" id="js-box">
+                </label>
+            </div>
+
+            <div>
+                <label>React
+                    <input type="checkbox" name="react" id="react-box">
+                </label>
+            </div>
+
+
         </div>
         <!-- 5) Создай здесь однострочное поле для ввода текста с подсказкой "Новый скилл", которая исчезает, когда начинаешь что-то печатать (для подсказки есть специальный атрибут) -->
+        <div>
+            <input type="text" name="skill" id="new-skill" placeholder="Новый скилл">
+        </div>
         <!-- 6) Создай здесь кнопку “Добавить” -->
+        <button>Добавить</button>
         <!-- 7) Добавь горизонтальную линию (для этого есть специальный тег) -->
-        
-        <table data-cy="hw-about-table-pre">
+        <hr>
+        <table border="1" data-cy="hw-about-table-pre">
             <!-- 8) В таблице сделай 5 строк и 3 столбца. 
                         - В первой строке ячейки заголовков, в остальных обычные ячейки
                         - Добавь границы для всей таблицы с помощью специального атрибута border="". Он устарел, но работает
                         - В последнем ряду первая ячейка должна занимать все свободное место по горизонтали (ширине). Таблицу можно заполнять любыми данными -->
+            <tr align="center"> 
+                <th>№</th>
+                <th>Наименование</th>
+                <th>Площадь,m2</th>
+            </tr>
+
+            <tr>
+                <td align="center">1</td>
+                <td>Спальня детская</td>
+                <td align="center">100</td>
+            </tr>
+
+            <tr>
+                <td align="center">2</td>
+                <td>Гостиная</td>
+                <td align="center">100</td>
+            </tr>
+
+            <tr>
+                <td align="center">3</td>
+                <td>Кухня</td>
+                <td align="center">100</td>
+            </tr>
+
+            <tr>
+                <td colspan="3">Итого 300 m2</td>
+            </tr>         
         </table>
     </section>
     <footer data-cy="hw-footer-pre">
         <!-- 9) Создай здесь ссылку на наш сайт https://it-incubator.io/ (текст ссылки должен быть it-incubator) -->
+        <a href="https://it-incubator.io/" target="_blank">it-incubator</a>
     </footer>
 </body>
 </html>
